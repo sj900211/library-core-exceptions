@@ -1,1 +1,1 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=run.freshr.common.configurations.ExceptionsConfiguration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=run.freshr.common.configurations.ExceptionsAutoConfiguration

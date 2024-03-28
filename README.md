@@ -25,11 +25,13 @@
 >>       message: "처리되었습니다."
 >>       code: "UAERROR"
 >> ```
->> 위처럼 변경하면 ExceptionsResponse 에 설정된다.  
+>> 위처럼 변경하면 ExceptionsData 에 설정된다.  
 >> ExceptionsProperties 에서는 lowerCameCase 형식이었지만  
 >> application.yml 에서는 lower-hypen 으로 작성된다.
-> - ## [ExceptionsConfiguration](./src/main/java/run/freshr/common/configurations/ExceptionsConfiguration.java)
+> - ## [ExceptionsAutoConfiguration](./src/main/java/run/freshr/common/configurations/ExceptionsAutoConfiguration.java)
 >> StatusEnum 과 ExceptionsProperties 에 설정한 값으로 ExceptionsData 를 빌드한다.
 > - ## [ExceptionsData](./src/main/java/run/freshr/common/data/ExceptionsData.java)
 >> StatusEnum 과 ExceptionsProperties 에 설정한 값으로 빌드되는 Class.  
 >> 이 Class 를 프로젝트에서 주입받아 사용
+> - ## [ExceptionData](./src/main/java/run/freshr/common/data/ExceptionData.java)
+>> 빌드될 데이터에 대한 공통 모델

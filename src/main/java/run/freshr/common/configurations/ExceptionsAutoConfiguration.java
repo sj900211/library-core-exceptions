@@ -44,7 +44,7 @@ import run.freshr.common.properties.ExceptionsProperties;
  */
 @Configuration(proxyBeanMethods = false)
 @EnableConfigurationProperties(ExceptionsProperties.class)
-public class ExceptionsConfiguration {
+public class ExceptionsAutoConfiguration {
 
   /**
    * 예외 데이터 객체 설정
