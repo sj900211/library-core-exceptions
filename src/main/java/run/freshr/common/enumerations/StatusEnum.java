@@ -30,7 +30,7 @@ public enum StatusEnum implements EnumModel {
    * @apiNote 성공 속성 정의
    * @since 2024. 3. 26. 오후 5:05:48
    */
-  SUCCESS(OK, "process success.", "OK"),
+  SUCCESS(OK, "process success.", "ok"),
 
   //   ______  __    __       _______.___________.  ______   .___  ___.
   //  /      ||  |  |  |     /       |           | /  __  \  |   \/   |
@@ -46,14 +46,14 @@ public enum StatusEnum implements EnumModel {
    * @apiNote 파라미터 오류 속성 정의
    * @since 2024. 3. 26. 오후 5:05:48
    */
-  PARAMETER(BAD_REQUEST, "[{0}] Parameter Exception", "EMPTY_PARAMETER"),
+  PARAMETER(BAD_REQUEST, "[{0}] Parameter Exception", "empty-parameter"),
   /**
    * 중복 데이터 오류 속성 정의
    *
    * @apiNote 중복 데이터 오류 속성 정의
    * @since 2024. 3. 26. 오후 5:05:48
    */
-  DUPLICATE(BAD_REQUEST, "[{0}] Duplicate Exception", "DATA_DUPLICATE"),
+  DUPLICATE(BAD_REQUEST, "[{0}] Duplicate Exception", "data-duplicate"),
 
   /**
    * 인증 오류 속성 정의
@@ -61,7 +61,7 @@ public enum StatusEnum implements EnumModel {
    * @apiNote 인증 오류 속성 정의
    * @since 2024. 3. 26. 오후 5:05:48
    */
-  UN_AUTHENTICATED(UNAUTHORIZED, "Un Authenticated Exception", "AUTH"),
+  UN_AUTHENTICATED(UNAUTHORIZED, "Un Authenticated Exception", "auth"),
 
   //  _______   _______  _______    ___      __    __   __      .___________.
   // |       \ |   ____||   ____|  /   \    |  |  |  | |  |     |           |
@@ -77,14 +77,14 @@ public enum StatusEnum implements EnumModel {
    * @apiNote NullPointerException 속성 정의
    * @since 2024. 3. 26. 오후 5:05:48
    */
-  NULL_POINTER(INTERNAL_SERVER_ERROR, "Null Pointer Exception", "EMPTY"),
+  NULL_POINTER(INTERNAL_SERVER_ERROR, "Null Pointer Exception", "empty"),
   /**
    * EntityNotFoundException 속성 정의
    *
    * @apiNote EntityNotFoundException 속성 정의
    * @since 2024. 3. 26. 오후 5:05:48
    */
-  ENTITY_NOT_FOUND(NOT_FOUND, "Entity Not Found Exception", "EMPTY_DATA"),
+  ENTITY_NOT_FOUND(NOT_FOUND, "Entity Not Found Exception", "empty-data"),
 
   /**
    * IOException 속성 정의
@@ -92,14 +92,15 @@ public enum StatusEnum implements EnumModel {
    * @apiNote IOException 속성 정의
    * @since 2024. 3. 26. 오후 5:05:48
    */
-  IO(INTERNAL_SERVER_ERROR, "IO Exception", "IO"),
+  IO(INTERNAL_SERVER_ERROR, "IO Exception", "io"),
   /**
    * FileSizeLimitExceededException 속성 정의
    *
    * @apiNote FileSizeLimitExceededException 속성 정의
    * @since 2024. 3. 26. 오후 5:05:48
    */
-  FILE_SIZE_LIMIT_EXCEEDED(INTERNAL_SERVER_ERROR, "File Size Limit Exceeded Exception", "IO_SIZE"),
+  FILE_SIZE_LIMIT_EXCEEDED(INTERNAL_SERVER_ERROR,
+      "File Size Limit Exceeded Exception", "io-size"),
 
   /**
    * JsonProcessingException 속성 정의
@@ -107,7 +108,7 @@ public enum StatusEnum implements EnumModel {
    * @apiNote JsonProcessingException 속성 정의
    * @since 2024. 3. 26. 오후 5:05:48
    */
-  JSON_PROCESSING(INTERNAL_SERVER_ERROR, "Json Processing Exception", "JSON"),
+  JSON_PROCESSING(INTERNAL_SERVER_ERROR, "Json Processing Exception", "json"),
 
   /**
    * SQLSyntaxErrorException 속성 정의
@@ -115,7 +116,7 @@ public enum StatusEnum implements EnumModel {
    * @apiNote SQLSyntaxErrorException 속성 정의
    * @since 2024. 3. 26. 오후 5:05:48
    */
-  SQL_SYNTAX_ERROR(INTERNAL_SERVER_ERROR, "SQL Syntax Error Exception", "SQL"),
+  SQL_SYNTAX_ERROR(INTERNAL_SERVER_ERROR, "SQL Syntax Error Exception", "sql"),
   /**
    * InvalidDataAccessResourceUsageException 속성 정의
    *
@@ -123,42 +124,44 @@ public enum StatusEnum implements EnumModel {
    * @since 2024. 3. 26. 오후 5:05:48
    */
   INVALID_DATA_ACCESS_RESOURCE_USAGE(INTERNAL_SERVER_ERROR,
-      "Invalid Data Access Resource Usage Exception", "SQL_ACCESS"),
+      "Invalid Data Access Resource Usage Exception", "sql-access"),
   /**
    * DataIntegrityViolationException 속성 정의
    *
    * @apiNote DataIntegrityViolationException 속성 정의
    * @since 2024. 3. 26. 오후 5:05:48
    */
-  DATA_INTEGRITY_VIOLATION(INTERNAL_SERVER_ERROR, "Data Integrity Violation Exception", "SQL_DATA"),
+  DATA_INTEGRITY_VIOLATION(INTERNAL_SERVER_ERROR,
+      "Data Integrity Violation Exception", "sql-data"),
   /**
    * BatchUpdateException 속성 정의
    *
    * @apiNote BatchUpdateException 속성 정의
    * @since 2024. 3. 26. 오후 5:05:48
    */
-  BATCH_UPDATE(INTERNAL_SERVER_ERROR, "Batch Update Exception", "SQL_UPDATE"),
+  BATCH_UPDATE(INTERNAL_SERVER_ERROR, "Batch Update Exception", "sql-update"),
   /**
    * SQLGrammarException 속성 정의
    *
    * @apiNote SQLGrammarException 속성 정의
    * @since 2024. 3. 26. 오후 5:05:48
    */
-  SQL_GRAMMAR(INTERNAL_SERVER_ERROR, "SQL Grammar Exception", "SQL_GRAMMAR"),
+  SQL_GRAMMAR(INTERNAL_SERVER_ERROR, "SQL Grammar Exception", "sql-grammar"),
   /**
    * ConstraintViolationException 속성 정의
    *
    * @apiNote ConstraintViolationException 속성 정의
    * @since 2024. 3. 26. 오후 5:05:48
    */
-  CONSTRAINT_VIOLATION(INTERNAL_SERVER_ERROR, "Constraint Violation Exception", "SQL_VIOLATION"),
+  CONSTRAINT_VIOLATION(INTERNAL_SERVER_ERROR,
+      "Constraint Violation Exception", "sql-violation"),
   /**
    * DataException 속성 정의
    *
    * @apiNote DataException 속성 정의
    * @since 2024. 3. 26. 오후 5:05:48
    */
-  DATA(INTERNAL_SERVER_ERROR, "Data Exception", "DATA"),
+  DATA(INTERNAL_SERVER_ERROR, "Data Exception", "data"),
 
   /**
    * AccessDeniedException 속성 정의
@@ -166,7 +169,7 @@ public enum StatusEnum implements EnumModel {
    * @apiNote AccessDeniedException 속성 정의
    * @since 2024. 3. 26. 오후 5:05:48
    */
-  ACCESS_DENIED(FORBIDDEN, "Access Denied Exception", "ACCESS"),
+  ACCESS_DENIED(FORBIDDEN, "Access Denied Exception", "access"),
 
   /**
    * IllegalStateException 속성 정의
@@ -174,14 +177,15 @@ public enum StatusEnum implements EnumModel {
    * @apiNote IllegalStateException 속성 정의
    * @since 2024. 3. 26. 오후 5:05:48
    */
-  ILLEGAL_STATE(INTERNAL_SERVER_ERROR, "Illegal State Exception", "ILLEGAL"),
+  ILLEGAL_STATE(INTERNAL_SERVER_ERROR, "Illegal State Exception", "illegal"),
   /**
    * IllegalStateException 속성 정의
    *
    * @apiNote IllegalStateException 속성 정의
    * @since 2024. 3. 26. 오후 5:05:48
    */
-  ILLEGAL_ARGUMENT(INTERNAL_SERVER_ERROR, "Illegal Argument Exception", "ILLEGAL_ARGUMENT"),
+  ILLEGAL_ARGUMENT(INTERNAL_SERVER_ERROR,
+      "Illegal Argument Exception", "illegal-argument"),
 
   /**
    * JwtException 속성 정의
@@ -189,14 +193,14 @@ public enum StatusEnum implements EnumModel {
    * @apiNote JwtException 속성 정의
    * @since 2024. 3. 26. 오후 5:05:48
    */
-  JWT(INTERNAL_SERVER_ERROR, "Jwt Exception", "TOKEN"),
+  JWT(INTERNAL_SERVER_ERROR, "Jwt Exception", "token"),
   /**
    * ExpiredJwtException 속성 정의
    *
    * @apiNote ExpiredJwtException 속성 정의
    * @since 2024. 3. 26. 오후 5:05:48
    */
-  EXPIRED_JWT(INTERNAL_SERVER_ERROR, "Expired JWT Exception", "TOKEN_EXPIRED"),
+  EXPIRED_JWT(INTERNAL_SERVER_ERROR, "Expired JWT Exception", "token-expired"),
 
   /**
    * UNTOUCHABLE 속성 정의
@@ -204,7 +208,7 @@ public enum StatusEnum implements EnumModel {
    * @apiNote UNTOUCHABLE 속성 정의
    * @since 2024. 3. 26. 오후 5:05:48
    */
-  ERROR(BAD_REQUEST, "System Exception. Call Developer Right Now.", "ERROR");
+  ERROR(BAD_REQUEST, "System Exception. Call Developer Right Now.", "error");
 
   /**
    * Http Status 속성
