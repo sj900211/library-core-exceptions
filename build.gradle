@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'run.freshr'
-version = '1.0.0.RELEASE'
+version = '1.0.0-SNAPSHOT'
 
 java {
   sourceCompatibility = '17'
@@ -51,7 +51,7 @@ dependencies {
   implementation 'com.fasterxml.jackson.core:jackson-databind'
 
   // FreshR
-  implementation "${group}:library-core-enumeration-mapper:1.0.0.RELEASE"
+  implementation "${group}:library-core-enumeration-mapper:1.0.0-SNAPSHOT"
 }
 
 test {
