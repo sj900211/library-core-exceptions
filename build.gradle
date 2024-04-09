@@ -51,7 +51,7 @@ dependencies {
   implementation 'com.fasterxml.jackson.core:jackson-databind'
 
   // FreshR
-  implementation "${group}:library-core-enumeration-mapper:1.0.0-SNAPSHOT"
+  implementation "${group}:library-core-enumeration-mapper:1.0.0.RELEASE"
 }
 
 test {
